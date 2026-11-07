@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Margins",
+    "slug": "margins",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ryzzz44.margins"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F4F0E6",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.ryzzz44.margins"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-font"
+    ],
+    "scheme": "margins",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
