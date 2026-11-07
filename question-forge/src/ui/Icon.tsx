@@ -1,3 +1,4 @@
+import { View } from 'react-native';
 import Svg, { Circle, Path } from 'react-native-svg';
 
 export type IconName =
@@ -18,7 +19,8 @@ export type IconName =
 export function Icon({ name, size = 22, color }: { name: IconName; size?: number; color: string }) {
   const p = { stroke: color, strokeWidth: 1.75, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, fill: 'none' };
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24" accessibilityElementsHidden importantForAccessibility="no">
+    <View accessibilityElementsHidden importantForAccessibility="no-hide-descendants" aria-hidden>
+    <Svg width={size} height={size} viewBox="0 0 24 24">
       {name === 'plus' && <Path d="M12 5v14M5 12h14" {...p} />}
       {name === 'close' && <Path d="M6 6l12 12M18 6L6 18" {...p} />}
       {name === 'cross' && <Path d="M7 7l10 10M17 7L7 17" {...p} strokeWidth={2.25} />}
@@ -38,5 +40,6 @@ export function Icon({ name, size = 22, color }: { name: IconName; size?: number
       {name === 'flip' && <Path d="M4 9a8 8 0 0114-3l2 2M20 4v4h-4M20 15a8 8 0 01-14 3l-2-2M4 20v-4h4" {...p} />}
       {name === 'retry' && <Path d="M4 4v5h5M4.6 9A8 8 0 1112 20" {...p} />}
     </Svg>
+    </View>
   );
 }
